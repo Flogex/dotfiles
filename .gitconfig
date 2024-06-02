@@ -1,0 +1,31 @@
+[init]
+        defaultBranch = main
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[submodule]
+	recurse = true
+[color "diff"]
+	old = bold red
+[alias]
+	s = status
+	fetchp = fetch --prune
+	fnr = fetch --no-recurse-submodules
+	amend  = commit --amend --no-edit
+	reword = commit --amend --message
+	undo   = reset HEAD~1
+	dic = diff --cached
+	mem = merge --no-edit origin/main
+	ff = merge --ff-only @{u}
+	wip = !git add :/ && git commit -m"WIP"
+[push]
+	default = current
+[help]
+	autocorrect = 2
+[user]
+	name = Florian Gerlinghoff
+[merge]
+	tool = bc
